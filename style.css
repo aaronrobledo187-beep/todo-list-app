@@ -1,0 +1,71 @@
+/* CSS reset */
+*{
+   margin:0px;
+   box-sizing:border-box;/* element size includes padding and border */
+}
+
+body{
+    background-color: rgb(36,44,57);
+    color:whitesmoke;
+    font-family: sans-serif;
+}
+
+.main{
+    background-color:rgb(57,59,70);
+    height: 100vh;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.main h1{
+    text-align: right;
+}
+
+.list{
+    background-color:rgb(36,44,57);;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 50px 20px;
+    flex-grow: 1;
+}
+.form {
+      background-color:rgb(36,44,57);;
+    margin: 10px;
+    border-radius: 15px;
+     padding: 50px 20px;
+     display: flex;
+     gap: 10px;
+}
+.form input {
+    font-size:24px;
+    border-radius: 8px;
+    width: 100;
+}
+
+.form button{
+    width: 80px;
+    background-color: inherit;
+    border: 2px soild whitesmoke;
+    border-radius: 24px;
+}
+
+.list-item{
+    background-color: dodgerblue;
+    padding: 15;
+    margin: 5px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+}
+.list-item label {
+    font-size: 20px;
+}
+.list-item input {
+    width: 24px;
+    height: 24px;
+}
