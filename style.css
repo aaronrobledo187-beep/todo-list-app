@@ -69,3 +69,19 @@ body{
     width: 24px;
     height: 24px;
 }
+
+@keyframes slide-right {
+    0% {
+        transform: translateX()
+    }
+    100%{
+        transfrom: translate(100%);
+    }
+}
+
+
+.remove-task {
+    animation slide-right 1s;
+    animation-delay: 100ms;
+
+}
