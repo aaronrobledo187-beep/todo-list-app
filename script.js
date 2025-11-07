@@ -4,10 +4,19 @@ function addtask(event){
     // Get user input form
     let textbook = document.getElementById("task-input");
     let task = texbox.value;
-    console.log(task);
-    // Create a list item
+    
+    // Check for empty task text
+    if(task =="") {
+      alert("please enter a task");
+      return;
+    }
+    
+    let idNum = generateIdNum();
      
-    createTaskDiv(task);
+    createTaskDiv(task, idNum);
+
+    // save task to local storage
+    localStorage.setItem("task" + idNum, task);
 
 
     let todoList = document.getElementById("todo-list");
@@ -44,7 +53,11 @@ function createTaskDiv(TaskText){
   
 }
 
-
+function generateIdNum() {
+  let todolist = document.getElementById("todo-list");
+  let idnum = todolist.childElementCount;
+  return idNum;
+}
 
 function removeTask(event){
     //Get id of checkbox
@@ -69,13 +82,14 @@ function removeTask(event){
 function loadTasks() {
       console.log("loading task....")
       // Get each task from localStorage
-      for(let i = 0; i < localStorage.length;++){
+      for(let i = 0; i < localStorage.length;++) {
         let key = localStorage.key(i);
         let task = localStorage.getItem(key);
         console.log(task);
       }
 
       // Create task divs for each task
+      createTaskDiv(task, key.substring(4));
 }
 
 loadTasks();
